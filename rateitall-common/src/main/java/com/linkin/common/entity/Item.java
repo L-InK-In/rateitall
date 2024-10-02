@@ -1,33 +1,43 @@
 package com.linkin.common.entity;
 
-import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "items")
-@Getter
-@Setter
+@TableName(value = "items")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Component
+@Schema(name = "Item", description = "物品实体类")
 public class Item {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @TableId(type = IdType.AUTO)
+    @Schema(name = "id", description = "物品id")
     private Long id;
 
-    @Column(nullable = false)
+    @Schema(name = "name", description = "物品名")
     private String name;
 
-    @Column(nullable = false)
+    @Schema(name = "description", description = "物品简介")
     private String description;
 
-    @Column(nullable = false)
-    private String type;  // 存储物品的类型，如电影、游戏、音乐等
+    @Schema(name = "picture", description = "物品照片")
+    private String picture;
 
-    @Column(name = "created_at", nullable = false)
-    private Date createdAt;
+    @Schema(name = "createdAt", description = "创建时间")
+    private LocalDateTime createdAt;
 
-    @Column(name = "updated_at")
-    private Date updatedAt;
+    @Schema(name = "updatedAt", description = "更新时间")
+    private LocalDateTime updatedAt;
+
+    @Schema(name = "creator", description = "创建者")
+    private Long creator;
 }

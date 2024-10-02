@@ -3,6 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/rateitall-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rateitall-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rateitall-item/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rateitall-item/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rateitall-review/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rateitall-review/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rateitall-user/src/main/java" charset="UTF-8" />

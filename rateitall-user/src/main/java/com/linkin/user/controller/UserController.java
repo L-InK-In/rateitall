@@ -1,8 +1,13 @@
 package com.linkin.user.controller;
 
-import com.linkin.common.entity.User;
+import com.linkin.common.dto.UserDTO;
+import com.linkin.common.dto.UserLoginDTO;
 import com.linkin.user.service.AuthService;
 import com.linkin.user.service.UserService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,6 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/users")
+@Tag(name = "用户有关接口")
+@Schema(name="users", description="用户注册与登录")
 public class UserController {
 
     @Autowired
@@ -21,8 +28,15 @@ public class UserController {
     @Autowired
     private AuthService authService;
 
+    /**
+     * 用户登录
+     * @param loginUser
+     * @return
+     */
     @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody User loginUser) {
+    @Operation(summary = "登录")
+    @Parameter(ref = "用户信息")
+    public ResponseEntity<?> login(@RequestBody UserLoginDTO loginUser) {
         // 调用服务层进行登录验证
         if (authService.login(loginUser.getUsername(), loginUser.getPassword())) {
             return ResponseEntity.ok("ok");
@@ -31,11 +45,17 @@ public class UserController {
         return ResponseEntity.status(401).body("Invalid username or password");
     }
 
+    /**
+     * 用户注册
+     * @param newUser
+     * @return
+     */
     @PostMapping("/register")
-    public ResponseEntity<?> registerUser(@RequestBody User newUser) {
-        userService.registerUser(newUser.getUsername(), newUser.getPassword());
+    @Operation(summary = "注册")
+    @Parameter(ref = "用户信息")
+    public ResponseEntity<?> registerUser(@RequestBody UserDTO newUser) {
+        userService.registerUser(newUser);
         return ResponseEntity.ok("User registered successfully");
     }
-
 
 }

@@ -1,34 +1,42 @@
 package com.linkin.common.entity;
 
-import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.*;
+import org.springframework.stereotype.Component;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "users")
-@Getter
-@Setter
+
+@TableName(value = "users")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Component
+@Schema(name = "User", description = "用户实体类")
 public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @TableId(type = IdType.AUTO)
+    @Schema(name = "id", description = "用户id")
     private Long id;
 
-    @Column(nullable = false, unique = true)
+    @Schema(name = "username", description = "用户名")
     private String username;
 
-    @Column(nullable = false)
+    @Schema(name = "password", description = "密码")
     private String password;
 
-    @Column(nullable = false, unique = true)
+    @Schema(name = "email", description = "邮箱")
     private String email;
 
-    @Column(name = "created_at", nullable = false)
-    private Date createdAt;
+    @Schema(name = "avatarUrl", description = "头像")
+    private String avatar;
 
-    @Column(name = "updated_at")
-    private Date updatedAt;
-
+    @TableField(value = "created_at")
+    @Schema(name = "createdAt", description = "创建时间")
+    private LocalDateTime createdAt;
 
 }

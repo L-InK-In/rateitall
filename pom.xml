@@ -13,6 +13,7 @@
         <module>rateitall-common</module>
         <module>rateitall-review</module>
         <module>rateitall-user</module>
+        <module>rateitall-item</module>
     </modules>
 
     <properties>
@@ -88,12 +89,12 @@
             <version>8.3.0</version>
             <scope>runtime</scope>
         </dependency>
-        <!-- Swagger2依赖 -->
+        <!-- nacos服务注册发现 -->
         <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-boot-starter</artifactId>
-            <version>3.0.0</version>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
+
     </dependencies>
     <build>
         <plugins>
