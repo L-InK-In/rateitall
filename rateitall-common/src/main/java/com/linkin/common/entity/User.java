@@ -32,10 +32,9 @@ public class User {
     @Schema(name = "email", description = "邮箱")
     private String email;
 
-    @Schema(name = "avatarUrl", description = "头像")
+    @Schema(name = "avatar", description = "头像")
     private String avatar;
 
-    @TableField(value = "created_at")
     @Schema(name = "createdAt", description = "创建时间")
     private LocalDateTime createdAt;
 

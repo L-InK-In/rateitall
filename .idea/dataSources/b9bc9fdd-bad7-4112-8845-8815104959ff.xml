@@ -1014,8 +1014,8 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </schema>
     <schema id="294" parent="1" name="rate_it">
       <Current>1</Current>
-      <IntrospectionTimestamp>2024-10-04.00:26:02</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2024-10-03.08:26:02</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2024-10-04.05:47:51</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2024-10-03.13:47:51</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="295" parent="1" name="nacos_config">
@@ -1109,7 +1109,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="315" parent="301" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>7</AutoIncrement>
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1268,7 +1268,7 @@ review_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="348" parent="304" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>8</AutoIncrement>
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1317,7 +1317,7 @@ review_id</ColNames>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="358" parent="305" name="avatar_url">
+    <column id="358" parent="305" name="avatar">
       <DasType>varchar(255)|0s</DasType>
       <Position>5</Position>
     </column>

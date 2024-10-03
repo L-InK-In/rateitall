@@ -10,10 +10,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
@@ -56,6 +53,13 @@ public class UserController {
     public ResponseEntity<?> registerUser(@RequestBody UserDTO newUser) {
         userService.registerUser(newUser);
         return ResponseEntity.ok("User registered successfully");
+    }
+
+    @RequestMapping(value = "/check/{id}", method=RequestMethod.GET)
+    @Operation(summary = "检查用户是否存在")
+    @Parameter(ref = "用户id")
+    public boolean UserIsExisted(@PathVariable("id") long id) {
+        return userService.getById(id) != null;
     }
 
 }
