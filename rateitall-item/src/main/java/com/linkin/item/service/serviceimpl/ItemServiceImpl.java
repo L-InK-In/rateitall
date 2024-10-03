@@ -1,19 +1,16 @@
-package com.linkin.item.service.impl;
+package com.linkin.item.service.serviceimpl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.linkin.common.dto.ItemDTO;
 import com.linkin.common.entity.Item;
-import com.linkin.common.entity.User;
 import com.linkin.item.mapper.ItemMapper;
-import com.linkin.item.mapper.TagMapper;
 import com.linkin.item.service.ItemService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Service
 public class ItemServiceImpl extends ServiceImpl<ItemMapper, Item> implements ItemService {

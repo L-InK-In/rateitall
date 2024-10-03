@@ -1,4 +1,4 @@
-package com.linkin.item.service.impl;
+package com.linkin.item.service.serviceimpl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.linkin.common.entity.ItemTag;

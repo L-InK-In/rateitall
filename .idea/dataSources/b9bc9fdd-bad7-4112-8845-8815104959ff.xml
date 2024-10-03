@@ -1014,8 +1014,8 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </schema>
     <schema id="294" parent="1" name="rate_it">
       <Current>1</Current>
-      <IntrospectionTimestamp>2024-10-03.05:33:35</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2024-10-02.13:33:35</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2024-10-04.00:26:02</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2024-10-03.08:26:02</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="295" parent="1" name="nacos_config">
@@ -1065,7 +1065,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
     <column id="306" parent="300" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>7</AutoIncrement>
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1165,7 +1165,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="327" parent="302" name="created_at">
+    <column id="327" parent="302" name="updated_at">
       <DasType>timestamp|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <Position>4</Position>
@@ -1200,7 +1200,7 @@ review_id</ColNames>
       <Predicate>(`rating` &gt;= 1) and (`rating` &lt;= 5)</Predicate>
     </check>
     <column id="334" parent="303" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>2</AutoIncrement>
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1297,7 +1297,7 @@ review_id</ColNames>
       <UnderlyingIndexName>name</UnderlyingIndexName>
     </key>
     <column id="354" parent="305" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>4</AutoIncrement>
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
