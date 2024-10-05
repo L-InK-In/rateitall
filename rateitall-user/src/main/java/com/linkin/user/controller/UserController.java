@@ -49,7 +49,6 @@ public class UserController {
      */
     @PostMapping("/register")
     @Operation(summary = "注册")
-    @Parameter(ref = "用户信息")
     public ResponseEntity<?> registerUser(@RequestBody UserDTO newUser) {
         userService.registerUser(newUser);
         return ResponseEntity.ok("User registered successfully");
@@ -57,7 +56,6 @@ public class UserController {
 
     @RequestMapping(value = "/check/{id}", method=RequestMethod.GET)
     @Operation(summary = "检查用户是否存在")
-    @Parameter(ref = "用户id")
     public boolean UserIsExisted(@PathVariable("id") long id) {
         return userService.getById(id) != null;
     }

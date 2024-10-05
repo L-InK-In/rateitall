@@ -1,21 +1,22 @@
 package com.linkin.item.controller;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
+import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.linkin.common.dto.ItemDTO;
+import com.linkin.common.entity.Item;
 import com.linkin.common.entity.ItemTag;
+import com.linkin.common.vo.ItemVO;
 import com.linkin.item.service.ItemService;
 import com.linkin.item.service.ItemTagService;
 import com.linkin.item.service.TagService;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +33,7 @@ public class ItemController {
     private TagService tagService;
     @Autowired
     private ItemTagService itemTagService;
+
     /**
      * 上传物品
      * @param itemDTO
@@ -39,7 +41,6 @@ public class ItemController {
      */
     @PostMapping("/upload")
     @Operation(summary = "上传物品")
-    @Parameter(ref = "物体信息")
     public ResponseEntity<?> upload(@RequestBody ItemDTO itemDTO) {
         long itemId = itemService.uploadItem(itemDTO);
         if(itemId != -1L) {
@@ -63,5 +64,72 @@ public class ItemController {
         } else {
             return ResponseEntity.status(403).body("Item already existed");
         }
+    }
+
+    /**
+     * 根据名称模糊查询相关物品
+     * @param name
+     * @return
+     */
+    @GetMapping("/find-items-by/{name}")
+    @SentinelResource(value = "getItemsByname", blockHandler = "getBlockHandler")
+    @Operation(summary = "根据名称查询物品")
+    public ResponseEntity<?> getItemsByname(@PathVariable("name")  String name) {
+        List<Item> items = itemService.getItemsByname(name);
+        List<ItemVO> itemVOS = new ArrayList<>();
+        for(Item item : items) {
+            ItemVO itemVO = new ItemVO();
+            BeanUtils.copyProperties(item, itemVO);
+            itemVO.setTagList(tagService.getNamesByIds(itemTagService.getTagsOfItem(item.getId())));
+            itemVOS.add(itemVO);
+        }
+        if(!itemVOS.isEmpty()) {
+            return ResponseEntity.status(200).body(itemVOS);
+        } else {
+            return ResponseEntity.status(404).body("未能查询到相关资源");
+        }
+    }
+
+    /**
+     * 查询所有带有该标签的物品
+     * @param name
+     * @return
+     */
+    @GetMapping("/find-items-of-tag/{tag}")
+    @Operation(summary = "根据标签查询物品")
+    public ResponseEntity<?> getAllItemsOftag(@PathVariable("tag")  String name) {
+        Long tagId = tagService.getIdByName(name);
+        List<Long> itemIds = itemTagService.getItemsByTag(tagId);
+        List<Item> items = itemService.listByIds(itemIds);
+        List<ItemVO> itemVOS = new ArrayList<>();
+        for(Item item : items) {
+            ItemVO itemVO = new ItemVO();
+            BeanUtils.copyProperties(item, itemVO);
+            itemVO.setTagList(tagService.getNamesByIds(itemTagService.getTagsOfItem(item.getId())));
+            itemVOS.add(itemVO);
+        }
+        if(!itemVOS.isEmpty()) {
+            return ResponseEntity.status(200).body(itemVOS);
+        } else {
+            return ResponseEntity.status(404).body("未能查询到相关资源");
+        }
+    }
+
+    /**
+     * 模拟某故障服务
+     * @return
+     * @throws Exception
+     */
+    @GetMapping("/flow")
+    public String flow() throws Exception {
+        Thread.sleep(3000);
+        return "normal";
+    }
+
+    // 流控方法必须和原方法类型一致参数一致
+    // 一定要加上BlockException
+    public ResponseEntity<?> getBlockHandler(String name, BlockException blockException){
+        // 我们可以在这个方法里面处理流控后的业务逻辑
+        return ResponseEntity.status(403).header("content-type", "text/plain;charset=UTF-8").body("别急");
     }
 }

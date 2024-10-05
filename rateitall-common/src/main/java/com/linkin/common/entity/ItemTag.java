@@ -18,10 +18,10 @@ import org.springframework.stereotype.Component;
 public class ItemTag {
     @TableId(type = IdType.AUTO)
     @Schema(name = "id", description = "物品与标签关系的id")
-    private long id;
+    private Long id;
 
     @Schema(name = "itemId", description = "物品id")
-    private long itemId;
+    private Long itemId;
     @Schema(name = "tagId", description = "标签id")
-    private long tagId;
+    private Long tagId;
 }

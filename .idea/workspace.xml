@@ -4,24 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1140a754-5b3c-457c-98e7-3e97adc58a84" name="Changes" comment="初步框架">
-      <change afterPath="$PROJECT_DIR$/rateitall-item/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rateitall-user/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="1140a754-5b3c-457c-98e7-3e97adc58a84" name="Changes" comment="修复一些bug、调整了一些点赞的逻辑（练习了OpenFeign的使用）">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b9bc9fdd-bad7-4112-8845-8815104959ff.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b9bc9fdd-bad7-4112-8845-8815104959ff.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b9bc9fdd-bad7-4112-8845-8815104959ff/storage_v2/_src_/schema/rate_it.6nieOg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b9bc9fdd-bad7-4112-8845-8815104959ff/storage_v2/_src_/schema/rate_it.6nieOg.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rateitall-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/entity/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/entity/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/entity/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/entity/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/config/FeignConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/config/FeignConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/entity/ItemTag.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/entity/ItemTag.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/entity/Vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/entity/Vote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rateitall-user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-user/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/ItemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/ItemApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/controller/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/ItemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/ItemTagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/ItemTagService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/TagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/TagService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/serviceimpl/ItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/serviceimpl/ItemServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/serviceimpl/ItemTagServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/serviceimpl/ItemTagServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/serviceimpl/TagServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/serviceimpl/TagServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/controller/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/controller/ReviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/openfeign/UserOpenFeign.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/openfeign/UserOpenFeign.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/service/VoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/service/VoteService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rateitall-user/src/main/java/com/linkin/user/UserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-user/src/main/java/com/linkin/user/UserApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rateitall-user/src/main/java/com/linkin/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-user/src/main/java/com/linkin/user/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rateitall-user/src/main/java/com/linkin/user/repository/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rateitall-user/src/main/java/com/linkin/user/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-user/src/main/java/com/linkin/user/service/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rateitall-user/src/main/java/com/linkin/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-user/src/main/java/com/linkin/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-user/src/main/java/com/linkin/user/service/serviceImpl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-user/src/main/java/com/linkin/user/service/serviceImpl/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +48,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -50,63 +62,83 @@
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
-    <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "E:/Work/java_workstation/RateItAll/rateitall-item/src/main/resources/mapper",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.43333334",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Work/java_workstation/waimai/sky-take-out&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.43333334&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ssh.settings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Work\java_workstation\RateItAll\rateitall-user\src\main\resources" />
+      <recent name="E:\Work\java_workstation\RateItAll\rateitall-review\src\main\resources" />
+      <recent name="E:\Work\java_workstation\RateItAll\rateitall-vote" />
       <recent name="E:\Work\java_workstation\RateItAll\rateitall-item\src\main\resources\mapper" />
       <recent name="E:\Work\java_workstation\RateItAll\rateitall-item\src\main\resources" />
-      <recent name="E:\Work\java_workstation\RateItAll\rateitall-user\src\main\java\com\linkin\user" />
-      <recent name="E:\Work\java_workstation\RateItAll\rateitall-common\src\main\java" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Work\java_workstation\RateItAll\rateitall-vote\src\main\java\com\linkin\vote" />
       <recent name="E:\Work\java_workstation\RateItAll\rateitall-user\src\main\java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.linkin.review.openfeign.fallback" />
+      <recent name="com.linkin.vote.controller" />
+      <recent name="com.linkin.review" />
       <recent name="com.linkin.item.service.impl" />
       <recent name="com.linkin.item.mapper" />
-      <recent name="com.linkin.item" />
-      <recent name="com.linkin.user.configuration" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ItemApplication">
+  <component name="RunManager" selected="Spring Boot.ReviewApplication">
     <configuration name="ItemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="rateitall-item" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.linkin.item.ItemApplication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.linkin.item.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReviewApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="rateitall-review" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.linkin.review.ReviewApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.linkin.review.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,12 +155,16 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ItemApplication" />
+        <item itemvalue="Spring Boot.ReviewApplication" />
         <item itemvalue="Spring Boot.UserApplication" />
+        <item itemvalue="Spring Boot.ItemApplication" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\linkin\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="1140a754-5b3c-457c-98e7-3e97adc58a84" name="Changes" comment="" />
@@ -138,7 +174,12 @@
       <updated>1727786804485</updated>
       <workItem from="1727786805568" duration="4526000" />
       <workItem from="1727791403661" duration="12152000" />
-      <workItem from="1727854708039" duration="21649000" />
+      <workItem from="1727854708039" duration="24701000" />
+      <workItem from="1727885062275" duration="24070000" />
+      <workItem from="1727964799318" duration="700000" />
+      <workItem from="1727965507830" duration="7963000" />
+      <workItem from="1727980268881" duration="24026000" />
+      <workItem from="1728102323496" duration="17069000" />
     </task>
     <task id="LOCAL-00001" summary="初步框架">
       <option name="closed" value="true" />
@@ -156,7 +197,47 @@
       <option name="project" value="LOCAL" />
       <updated>1727798172611</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="更新了上传物体的业务">
+      <option name="closed" value="true" />
+      <created>1727882046528</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1727882046528</updated>
+    </task>
+    <task id="LOCAL-00004" summary="更新了上传物体的业务">
+      <option name="closed" value="true" />
+      <created>1727886439027</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1727886439027</updated>
+    </task>
+    <task id="LOCAL-00005" summary="更新了点赞/踩的基本功能">
+      <option name="closed" value="true" />
+      <created>1727948453608</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1727948453608</updated>
+    </task>
+    <task id="LOCAL-00006" summary="修复一些bug、调整了一些点赞的逻辑（练习了OpenFeign的使用）">
+      <option name="closed" value="true" />
+      <created>1727964439730</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1727964439730</updated>
+    </task>
+    <task id="LOCAL-00007" summary="修复一些bug、调整了一些点赞的逻辑（练习了OpenFeign的使用）">
+      <option name="closed" value="true" />
+      <created>1727965078013</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1727965078013</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,22 +256,39 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初步框架" />
-    <option name="LAST_COMMIT_MESSAGE" value="初步框架" />
+    <MESSAGE value="更新了上传物体的业务" />
+    <MESSAGE value="更新了点赞/踩的基本功能" />
+    <MESSAGE value="修复一些bug、调整了一些点赞的逻辑（练习了OpenFeign的使用）" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复一些bug、调整了一些点赞的逻辑（练习了OpenFeign的使用）" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/rateitall-user/src/main/java/com/linkin/user/service/UserService.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="9" />
+          <url>file://$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/controller/ReviewController.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/impl/TagServiceImpl.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="21" />
+          <url>file://$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/controller/ReviewController.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/controller/ReviewController.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/controller/ItemController.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

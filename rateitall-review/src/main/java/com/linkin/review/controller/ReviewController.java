@@ -44,6 +44,11 @@ public class ReviewController {
         return ResponseEntity.ok("Already rated");
     }
 
+    /**
+     * 评论点赞/踩
+     * @param voteDTO
+     * @return
+     */
     @PostMapping("/vote")
     @Operation(summary = "评论点赞/踩")
     public ResponseEntity<?> voteReview(@RequestBody VoteDTO voteDTO) {

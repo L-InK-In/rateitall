@@ -11,4 +11,8 @@ import java.util.List;
 public interface TagService extends IService<Tag> {
 
     void saveBatchByName(List<String> tagList);
+
+    Long getIdByName(String name);
+
+    List<String> getNamesByIds(List<Long> ids);
 }
