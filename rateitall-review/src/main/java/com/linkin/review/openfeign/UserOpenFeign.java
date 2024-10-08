@@ -1,6 +1,7 @@
 package com.linkin.review.openfeign;
 
 
+
 import com.linkin.review.openfeign.fallback.UserOpenFeignFallback;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,5 +18,4 @@ public interface UserOpenFeign {
      */
     @RequestMapping(value = "/check/{id}", method=RequestMethod.GET)
     boolean UserIsExisted(@PathVariable("id") long id);
-
 }

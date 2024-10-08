@@ -1,8 +1,9 @@
 package com.linkin.user.service.serviceImpl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.linkin.common.entity.User;
+
 import com.linkin.user.mapper.UserMapper;
+import com.linkin.user.pojo.entity.User;
 import com.linkin.user.service.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

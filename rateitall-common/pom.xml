@@ -122,6 +122,11 @@
             <artifactId>druid-spring-boot-3-starter</artifactId>
             <version>1.2.20</version>
         </dependency>
+        <!-- seata启动器 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

@@ -1,9 +1,15 @@
 package com.linkin.review.service;
 
-import com.baomidou.mybatisplus.extension.service.IService;
-import com.linkin.common.dto.ReviewDTO;
-import com.linkin.common.entity.Review;
+import com.github.jeffreyning.mybatisplus.service.IMppService;
+import com.linkin.review.pojo.entity.Review;
+import com.linkin.review.pojo.vo.HotReviewVo;
 
-public interface ReviewService extends IService<Review> {
-    long rateItem(ReviewDTO reviewDTO);
+import java.util.List;
+
+
+public interface ReviewService extends IMppService<Review> {
+
+    List<HotReviewVo> getHotReviews(List<Long> itemIds);
+
+    HotReviewVo getHotReview(Long itemId);
 }

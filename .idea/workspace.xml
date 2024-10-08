@@ -4,32 +4,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1140a754-5b3c-457c-98e7-3e97adc58a84" name="Changes" comment="修复一些bug、调整了一些点赞的逻辑（练习了OpenFeign的使用）">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b9bc9fdd-bad7-4112-8845-8815104959ff.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b9bc9fdd-bad7-4112-8845-8815104959ff.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b9bc9fdd-bad7-4112-8845-8815104959ff/storage_v2/_src_/schema/rate_it.6nieOg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b9bc9fdd-bad7-4112-8845-8815104959ff/storage_v2/_src_/schema/rate_it.6nieOg.meta" afterDir="false" />
+    <list default="true" id="1140a754-5b3c-457c-98e7-3e97adc58a84" name="Changes" comment="1、练习了Sentinel&#10;2、完善了一些逻辑">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rateitall-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/config/FeignConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/config/FeignConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/entity/ItemTag.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/entity/ItemTag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/entity/Vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/entity/Vote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/config/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/dto/ItemDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/dto/ReviewDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/dto/UserDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/dto/UserLoginDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/dto/VoteDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/entity/Item.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/entity/ItemTag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/entity/Review.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/entity/Tag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-common/src/main/java/com/linkin/common/entity/Vote.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/ItemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/ItemApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/controller/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/mapper/ItemMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/mapper/ItemMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/mapper/ItemTagMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/mapper/TagMapper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/ItemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/ItemTagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/ItemTagService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/TagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/TagService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/ItemTagService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/TagService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/serviceimpl/ItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/serviceimpl/ItemServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/serviceimpl/ItemTagServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/serviceimpl/ItemTagServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/serviceimpl/TagServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/serviceimpl/TagServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/serviceimpl/ItemTagServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/serviceimpl/TagServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-item/src/main/resources/mapper/TagMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/ReviewApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/ReviewApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/controller/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/controller/ReviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/mapper/ReviewMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/mapper/ReviewMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/mapper/VoteMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/mapper/VoteMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/openfeign/UserOpenFeign.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/openfeign/UserOpenFeign.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/service/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/service/ReviewService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/service/VoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/service/VoteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/service/serviceImpl/ReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/service/serviceImpl/ReviewServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/service/serviceImpl/VoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/service/serviceImpl/VoteServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-review/src/main/resources/mapper/ReviewMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-review/src/main/resources/mapper/VoteMapper.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rateitall-user/src/main/java/com/linkin/user/UserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-user/src/main/java/com/linkin/user/UserApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rateitall-user/src/main/java/com/linkin/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-user/src/main/java/com/linkin/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rateitall-user/src/main/java/com/linkin/user/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-user/src/main/java/com/linkin/user/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-user/src/main/java/com/linkin/user/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-user/src/main/java/com/linkin/user/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-user/src/main/java/com/linkin/user/service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-user/src/main/java/com/linkin/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-user/src/main/java/com/linkin/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rateitall-user/src/main/java/com/linkin/user/service/serviceImpl/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-user/src/main/java/com/linkin/user/service/serviceImpl/AuthServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rateitall-user/src/main/java/com/linkin/user/service/serviceImpl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rateitall-user/src/main/java/com/linkin/user/service/serviceImpl/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,13 +58,27 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "L-InK-In"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="9fc450ff-3c88-44a6-b67f-7fc18c5d6baa" />
+        <option name="url" value="https://github.com/L-InK-In/RateItAll.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -67,59 +99,61 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Work/java_workstation/waimai/sky-take-out&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.43333334&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ssh.settings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "database.data.extractors.current.export.id": "SQL Updates",
+    "database.data.extractors.current.id": "SQL Updates",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "E:/Work/java_workstation/RateItAll/rateitall-user/src/main/java/com/linkin/user",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.43333334",
+    "settings.editor.selected.configurable": "ssh.settings",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Work\java_workstation\RateItAll\rateitall-user\src\main\java\com\linkin\user" />
+      <recent name="E:\Work\java_workstation\RateItAll\rateitall-user\src\main\java\com\linkin\user\pojo\dto" />
       <recent name="E:\Work\java_workstation\RateItAll\rateitall-user\src\main\resources" />
       <recent name="E:\Work\java_workstation\RateItAll\rateitall-review\src\main\resources" />
       <recent name="E:\Work\java_workstation\RateItAll\rateitall-vote" />
-      <recent name="E:\Work\java_workstation\RateItAll\rateitall-item\src\main\resources\mapper" />
-      <recent name="E:\Work\java_workstation\RateItAll\rateitall-item\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Work\java_workstation\RateItAll\rateitall-vote\src\main\java\com\linkin\vote" />
       <recent name="E:\Work\java_workstation\RateItAll\rateitall-user\src\main\java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.linkin.item.openfeign.fallback" />
       <recent name="com.linkin.review.openfeign.fallback" />
+      <recent name="com.linkin.review.pojo.dto" />
+      <recent name="com.linkin.review.pojo.entity" />
       <recent name="com.linkin.vote.controller" />
-      <recent name="com.linkin.review" />
-      <recent name="com.linkin.item.service.impl" />
-      <recent name="com.linkin.item.mapper" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ReviewApplication">
+  <component name="RunManager" selected="Spring Boot.ItemApplication">
     <configuration name="ItemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="rateitall-item" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.linkin.item.ItemApplication" />
@@ -155,9 +189,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ReviewApplication" />
-        <item itemvalue="Spring Boot.UserApplication" />
         <item itemvalue="Spring Boot.ItemApplication" />
+        <item itemvalue="Spring Boot.UserApplication" />
+        <item itemvalue="Spring Boot.ReviewApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +213,7 @@
       <workItem from="1727964799318" duration="700000" />
       <workItem from="1727965507830" duration="7963000" />
       <workItem from="1727980268881" duration="24026000" />
-      <workItem from="1728102323496" duration="17069000" />
+      <workItem from="1728102323496" duration="90422000" />
     </task>
     <task id="LOCAL-00001" summary="初步框架">
       <option name="closed" value="true" />
@@ -237,7 +271,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727965078013</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="1、练习了Sentinel&#10;2、完善了一些逻辑">
+      <option name="closed" value="true" />
+      <created>1728135267833</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1728135267833</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,30 +301,86 @@
     <MESSAGE value="更新了上传物体的业务" />
     <MESSAGE value="更新了点赞/踩的基本功能" />
     <MESSAGE value="修复一些bug、调整了一些点赞的逻辑（练习了OpenFeign的使用）" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复一些bug、调整了一些点赞的逻辑（练习了OpenFeign的使用）" />
+    <MESSAGE value="1、练习了Sentinel&#10;2、完善了一些逻辑" />
+    <option name="LAST_COMMIT_MESSAGE" value="1、练习了Sentinel&#10;2、完善了一些逻辑" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/controller/ReviewController.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/controller/ReviewController.java</url>
-          <line>55</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/controller/ReviewController.java</url>
+          <url>file://$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/controller/RankingController.java</url>
           <line>60</line>
-          <option name="timeStamp" value="27" />
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/controller/RankingController.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/controller/RankingController.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/controller/RankingController.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/controller/RankingController.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/controller/ItemController.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/controller/ReviewController.java</url>
+          <line>94</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/controller/ReviewController.java</url>
           <line>89</line>
-          <option name="timeStamp" value="35" />
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/controller/ReviewController.java</url>
+          <line>145</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/controller/ReviewController.java</url>
+          <line>158</line>
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/controller/ReviewController.java</url>
+          <line>143</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/controller/ReviewController.java</url>
+          <line>138</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/controller/ReviewController.java</url>
+          <line>144</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rateitall-review/src/main/java/com/linkin/review/service/serviceImpl/ReviewServiceImpl.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rateitall-item/src/main/java/com/linkin/item/service/serviceimpl/ItemServiceImpl.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="100" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -12,7 +12,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @Configuration
 public class SwaggerConfig {
     @Bean
-    public OpenAPI springShopOpenAPI() {
+    public OpenAPI springOpenAPI() {
         return new OpenAPI()
                 .info(new Info().title("RateItAll API")
                         .description("RateItAll sample application")
