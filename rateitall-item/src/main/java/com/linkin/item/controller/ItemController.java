@@ -45,7 +45,10 @@ public class ItemController {
      */
     @PostMapping("/upload")
     @Operation(summary = "上传物品")
-    public ResponseEntity<?> uploadItem(@RequestBody ItemDTO itemDTO) {
+    public ResponseEntity<?> uploadItem(
+            @RequestHeader("X-User-Id") Long userId,
+            @RequestHeader("X-User-Name") String userName,
+            @RequestBody ItemDTO itemDTO) {
 
         // check user existed
         if (!userOpenFeign.UserIsExisted(itemDTO.getUserId())) {

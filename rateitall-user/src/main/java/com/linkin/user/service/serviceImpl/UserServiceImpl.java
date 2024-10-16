@@ -18,15 +18,15 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Autowired
     private UserMapper userMapper;
 
-    @Autowired
-    private BCryptPasswordEncoder passwordEncoder;
+    //@Autowired
+    //private BCryptPasswordEncoder passwordEncoder;
 
     public long registerUser(UserDTO userDTO) {
         // 使用 BCrypt 将密码哈希化
-        String hashedPassword = passwordEncoder.encode(userDTO.getPassword());
+        //String hashedPassword = passwordEncoder.encode(userDTO.getPassword());
         User user = new User();
         BeanUtils.copyProperties(userDTO, user);
-        user.setPassword(hashedPassword); // 存储哈希后的密码
+        //user.setPassword(hashedPassword); // 存储哈希后的密码
         return userMapper.insert(user);
     }
 

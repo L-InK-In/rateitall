@@ -12,16 +12,18 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 //, scanBasePackages="com.linkin"
 @SpringBootApplication(exclude = SecurityAutoConfiguration.class)
-@MapperScan("com.linkin.item.mapper")
-@EntityScan(basePackages = "com.linkin.item.pojo.entity")
+//@MapperScan("com.linkin.item.mapper")
+//@EntityScan(basePackages = "com.linkin.item.pojo.entity")
 @EnableDiscoveryClient
-@Import({SwaggerConfig.class, MyMetaObjectHandler.class})
+//@Import({SwaggerConfig.class, MyMetaObjectHandler.class})
+@ComponentScan({"com.linkin.common", "com.linkin.item"})
 @EnableFeignClients
 public class ItemApplication {
     public static void main(String[] args) {

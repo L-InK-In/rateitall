@@ -7,13 +7,16 @@ import com.linkin.user.pojo.dto.UserLoginDTO;
 import com.linkin.user.pojo.entity.User;
 import com.linkin.user.service.AuthService;
 import com.linkin.user.service.UserService;
+
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 @RestController
@@ -37,8 +40,13 @@ public class UserController {
     @Operation(summary = "登录")
     public ResponseEntity<?> login(@RequestBody UserLoginDTO loginUser) {
         // 调用服务层进行登录验证
-        if (authService.login(loginUser.getUsername(), loginUser.getPassword())) {
-            return ResponseEntity.ok("ok");
+        User findUser = authService.login(loginUser.getUsername(), loginUser.getPassword());
+        if (findUser != null) {
+
+//            String jwtToken = JWTUtil.generateToken(findUser.getId(), findUser.getRole());
+//            Map<Object, Object> map =new HashMap<>();
+//            map.put("token", jwtToken);
+            return ResponseEntity.ok("map");
         }
         // 验证失败，返回错误信息
         return ResponseEntity.status(401).body("Invalid username or password");

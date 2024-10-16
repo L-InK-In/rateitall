@@ -1,7 +1,9 @@
 package com.linkin.user.service;
 
+import com.linkin.user.pojo.entity.User;
+
 public interface AuthService {
 
-    public boolean login(String username, String password);
+    public User login(String username, String password);
 
 }

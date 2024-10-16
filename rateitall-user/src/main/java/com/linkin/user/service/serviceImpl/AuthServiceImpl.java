@@ -14,19 +14,19 @@ public class AuthServiceImpl implements AuthService {
     @Autowired
     private UserMapper userMapper;
 
-    @Autowired
-    private BCryptPasswordEncoder passwordEncoder;
+    //@Autowired
+    //private BCryptPasswordEncoder passwordEncoder;
 
-    public boolean login(String username, String password) {
+    public User login(String username, String password) {
         // 从数据库中查找用户
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        queryWrapper.select("password");
+        queryWrapper.select("password, id, role");
         queryWrapper.eq("username", username);
         User user = userMapper.selectOne(queryWrapper);
         if (user != null) {
             // 进行密码验证
-            return passwordEncoder.matches(password, user.getPassword());
+            return user;
         }
-        return false;
+        return null;
     }
 }
